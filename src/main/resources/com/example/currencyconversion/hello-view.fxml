@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.currencyconversion.CurrencyConverterApplication">
+    <children>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500" minWidth="700" prefHeight="512.0" prefWidth="716.0" style="-fx-background-color: BLUE;" VBox.vgrow="ALWAYS">
+            <children>
+                <Label alignment="CENTER" layoutX="165.0" layoutY="78.0" prefHeight="40.0" prefWidth="355.0" style="-fx-alignment: center;" text="Currency Converter" textAlignment="RIGHT" wrapText="true">
+                    <font>
+                        <Font name="Osaka-Mono" size="36.0" />
+                    </font>
+               <textFill>
+                  <RadialGradient centerX="0.49999999999999994" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.4532163739204407" green="0.8157894611358643" blue="0.5196881294250488" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="0.5417823195457458" green="0.6100000143051147" blue="0.33550000190734863" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9342105388641357" green="0.9342105388641357" blue="0.9342105388641357" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+                </Label>
+                <Button fx:id="btnConvert" layoutX="312.0" layoutY="287.0" mnemonicParsing="false" text="Convert">
+               <font>
+                  <Font name="Helvetica Neue" size="13.0" />
+               </font></Button>
+                <TextField fx:id="txtUserAmount" layoutX="220.0" layoutY="216.0" prefHeight="26.0" prefWidth="245.0" />
+                <Label layoutX="138.0" layoutY="221.0" text="Enter Amount:" textFill="WHITE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#40570f14" height="26.0" layoutX="221.0" layoutY="250.0" stroke="TRANSPARENT" strokeType="INSIDE" width="245.0" />
+            <Label fx:id="lblResult" layoutX="236.0" layoutY="250.0" prefHeight="26.0" prefWidth="215.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" />
+            <ChoiceBox fx:id="choiceTo" layoutX="376.0" layoutY="140.0" prefHeight="26.0" prefWidth="179.0" />
+            <Label fx:id="lblCurrencyFrm" layoutX="92.0" layoutY="118.0" prefHeight="17.0" prefWidth="215.0" textAlignment="JUSTIFY" textFill="WHITE" />
+            <Label fx:id="lblCurrencyTo" layoutX="358.0" layoutY="118.0" prefHeight="17.0" prefWidth="228.0" textAlignment="JUSTIFY" textFill="WHITE" />
+            <ChoiceBox fx:id="choiceFrom" layoutX="110.0" layoutY="140.0" prefHeight="26.0" prefWidth="179.0" />
+            <Label fx:id="lblDate" layoutX="225.0" layoutY="353.0" prefHeight="33.0" prefWidth="245.0" style="-fx-text-alignment: center;" textFill="WHITE" />
+            <Label fx:id="lblCode" layoutX="472.0" layoutY="221.0" textFill="WHITE" />
+            <Button fx:id="btnSwap" layoutX="320.0" layoutY="177.0" mnemonicParsing="false" text="swap" />
+            <Label fx:id="lblCodeR" layoutX="472.0" layoutY="255.0" prefHeight="17.0" prefWidth="63.0" textFill="WHITE" />
+            <Label layoutX="184.0" layoutY="255.0" text="Value:" textFill="WHITE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#40570f14" height="26.0" layoutX="221.0" layoutY="320.0" stroke="TRANSPARENT" strokeType="INSIDE" width="245.0" />
+            <Label fx:id="lblRate" layoutX="236.0" layoutY="320.0" prefHeight="26.0" prefWidth="215.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" />
+            <Label layoutX="129.0" layoutY="325.0" prefHeight="17.0" prefWidth="96.0" text="Exchange Rate:" textFill="WHITE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#40570f14" height="26.0" layoutX="221.0" layoutY="357.0" stroke="TRANSPARENT" strokeType="INSIDE" width="245.0" />
+            <Label layoutX="138.0" layoutY="361.0" prefHeight="17.0" prefWidth="96.0" text="Last Update:" textFill="WHITE" />
+
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
